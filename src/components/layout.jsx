@@ -1,10 +1,10 @@
 import React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, Divider } from "@mui/material";
 import { Home } from "@mui/icons-material";
 import SearchMovie from "../containres/SearchMovie";
 import { styled } from "@mui/system";
-
+import { Link } from "react-router-dom";
 const lightTheme = createTheme({
   palette: {
     mode: "light",
@@ -16,7 +16,9 @@ const HomeIcone = styled(Home)({
 });
 const SpanStyle = styled("span")(({ theme }) => ({
   display: "flex",
-  
+}));
+const DividerStyle = styled(Divider)(({ theme }) => ({
+  borderWidth: 5,
 }));
 const Layout = ({ children }) => {
   return (
@@ -24,9 +26,11 @@ const Layout = ({ children }) => {
       <CssBaseline />
       <SpanStyle>
         <SearchMovie />
-        <HomeIcone />
-        
+        <Link to="/">
+          <HomeIcone />
+        </Link>
       </SpanStyle>
+      <DividerStyle />
       {children}
     </ThemeProvider>
   );

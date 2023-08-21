@@ -1,5 +1,12 @@
 import React from "react";
-import { TextField, Paper, MenuItem, Grid, Typography } from "@mui/material";
+import {
+  TextField,
+  Paper,
+  MenuItem,
+  Grid,
+  Typography,
+  IconButton,
+} from "@mui/material";
 import { styled } from "@mui/system";
 import { useDispatch } from "react-redux";
 import { searchMovie } from "../redux/search";
@@ -7,6 +14,9 @@ import Downshift from "downshift";
 import { Link } from "react-router-dom";
 import { IMAGE_PATH, COVER_PLACEHOLDER } from "../config";
 import { mapGenres } from "../lib/helper";
+import { InputAdornment } from "@mui/material";
+import {Search} from "@mui/icons-material";
+
 const InputBox = styled(TextField)({
   width: 1500,
   padding: "10px",
@@ -65,6 +75,11 @@ const Suggestion = ({ movies, genres }) => {
             variant="outlined"
             size="small"
             inputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <Search />
+                </InputAdornment>
+              ),
               ...getInputProps({ onChange: inputOnchange }),
             }}
           />

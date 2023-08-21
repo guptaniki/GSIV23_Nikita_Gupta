@@ -14,7 +14,7 @@ const movieSlice = createSlice({
   name: "movieSlice",
   initialState,
   reducers: {
-    getMoviewithID: (state) => {
+    getMovie: (state) => {
       return {
         ...state,
         isFetching: true,
@@ -37,5 +37,5 @@ const movieSlice = createSlice({
   },
 });
 
-export const { getMoviewithID, fetchMovie, resetState } = movieSlice.actions;
+export const { getMovie, fetchMovie, resetState } = movieSlice.actions;
 export default movieSlice.reducer;

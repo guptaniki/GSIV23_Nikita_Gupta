@@ -10,9 +10,16 @@ export default class TheMovieDBApi {
     );
     return response.json();
   };
-  getMoviesWithId = async (id) => {
+  getMovie = async (id) => {
     const response = await fetch(
       `${this.apiBaseUrl}/movie/${id}?api_key=${this.apiKey}&append_to_response=recommendations`
+    );
+    return response.json();
+  };
+  getCast = async (id) => {
+    const response = await fetch(
+      `${this.apiBaseUrl}/movie/${id}/casts?api_key=${this.apiKey}`
+      
     );
     return response.json();
   };

@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+List of Elements  from the challenge
+- in this challenge redux part before this project i am quit aware redux but when i createing this project i try make redux and calling api
+-  i try to explore material Ui currently I am using react-gel componets for Design purpose 
+
+
+List what you would do to improve your solution 
+- i try to improve aviod  multiple api calling in movieDetailspage
+- i try some desing changes also for project
+

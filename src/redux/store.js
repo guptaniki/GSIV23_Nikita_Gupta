@@ -3,7 +3,8 @@ import searchReducers from "./search";
 import watcherSaga from "../sagas";
 import genresReducers from "./genres";
 import moviesReducers from "./movies";
-import movieReducers from "./movie";
+import moviePageReducers from "./movie";
+import castReducers from "./cast";
 import createSagaMiddleware from "@redux-saga/core";
 const sagaMiddleware = createSagaMiddleware();
 
@@ -12,7 +13,8 @@ const store = configureStore({
     search: searchReducers,
     genres: genresReducers,
     movies: moviesReducers,
-    movie: movieReducers,
+    moviePage: moviePageReducers,
+    cast: castReducers,
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware({ think: false }).prepend(sagaMiddleware);
